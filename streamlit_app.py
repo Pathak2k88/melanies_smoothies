@@ -5,7 +5,7 @@ import numpy as np
 #from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
 
-cnx=st.connection('snowflake')
+cnx=st.connection("snowflake")
 session = cnx.session()
 
 # Write directly to the app
