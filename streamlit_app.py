@@ -2,8 +2,11 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from snowflake.snowpark.context import get_active_session
+#from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
+
+cnx=st.connection('snowflake')
+session = cnx.session()
 
 # Write directly to the app
 st.title("Customise your Smoothie:balloon:")
