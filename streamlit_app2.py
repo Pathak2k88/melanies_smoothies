@@ -22,7 +22,7 @@ session = cnx.session()
 #my_dataframe = session.table("smoothies.public.ORDERS").filter(col('INGREDIENTS'),col('NAME_ON_ORDER'),col('ORDER_FILLED'),col('ORDER_UID'))
 my_dataframe = session.table("smoothies.public.ORDERS").filter(col('ORDER_FILLED'))
 #ingredients_list = st.multiselect("Choose upto 5 ingredients",my_dataframe)
-st.write(my_dataframe)
+#st.write(my_dataframe)
 editable_df = st.data_editor(my_dataframe)
 submitted = st.button('Submit')
 if submitted:
