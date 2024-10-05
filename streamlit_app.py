@@ -22,8 +22,9 @@ name_on_order=st.text_input('Name on Smoothie:')
 st.write('Name on your smoothie will be',name_on_order)
 #session = get_active_session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'),col('SEARCH_ON'))
-st.stop()
+
 ingredients_list = st.multiselect("Choose upto 5 ingredients",my_dataframe,max_selections=6)
+st.stop()
 if ingredients_list:
     st.write(ingredients_list)
     st.text(ingredients_list)
